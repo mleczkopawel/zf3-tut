@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="203bbab1-20b6-43fc-907f-963c0d363851" name="zf3t.local" url="https://zf3t.local">
+        <fileTransfer port="0" mountedRoot="D:\xampp\htdocs\zf3\zf-tut" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
