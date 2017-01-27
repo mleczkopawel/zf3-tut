@@ -9,7 +9,7 @@ namespace Portal;
 
 use Interop\Container\ContainerInterface;
 use Portal\Controller\IndexController;
-use Portal\Controller\IndexControllerFactory;
+use Portal\Controller\UserUsedControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -28,6 +28,16 @@ return [
                     ],
                 ],
             ],
+            'admin' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/admin',
+                    'defaults' => [
+                        'controller' => 'AdminController',
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
             'portal' => [
                 'type'    => Segment::class,
                 'options' => [
@@ -42,7 +52,8 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => IndexControllerFactory::class,
+            Controller\IndexController::class => UserUsedControllerFactory::class,
+            'AdminController' => UserUsedControllerFactory::class,
         ],
     ],
     'view_manager' => [

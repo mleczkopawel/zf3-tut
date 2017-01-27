@@ -23,12 +23,12 @@ class RepositoryFactory implements FactoryInterface
      * Create an object
      *
      * @param ContainerInterface $serviceManager
-     * @param  string $requestedName
+     * @param  string $controllerName
      * @param  null|array $options
      * @return object
      * @internal param ContainerInterface $container
      */
-    public function __invoke(ContainerInterface $serviceManager, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $serviceManager, $controllerName, array $options = null)
     {
         $identityMap = $serviceManager->get(MemoryIdentityMap::class);
         $dataMapper = $serviceManager->get(MysqlDataMapper::class);
