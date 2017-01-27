@@ -33,7 +33,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "PortalTest\\": "module/Portal/test/",
+            "ZFTTest\\": "module/ZFT/test/"
         }
     },
     "extra": [],
