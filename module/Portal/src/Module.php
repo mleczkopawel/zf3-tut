@@ -7,12 +7,37 @@
 
 namespace Portal;
 
-class Module
+use Zend\EventManager\EventInterface;
+use Zend\ModuleManager\Feature\BootstrapListenerInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+
+/**
+ * Class Module
+ * @package Portal
+ */
+class Module implements ConfigProviderInterface, BootstrapListenerInterface
 {
+    /**
+     *
+     */
     const VERSION = '3.0.2dev';
 
+    /**
+     * @return mixed
+     */
     public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';
+    }
+
+    /**
+     * Listen to the bootstrap event
+     *
+     * @param EventInterface $e
+     * @return void
+     */
+    public function onBootstrap(EventInterface $e)
+    {
+        return;
     }
 }
