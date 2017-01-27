@@ -5,7 +5,7 @@
  * Time: 11:17
  */
 
-namespace ZFT\Entity;
+namespace ZFT;
 
 
 class User

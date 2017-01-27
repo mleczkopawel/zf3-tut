@@ -9,7 +9,7 @@ namespace ZFTest;
 
 
 use PHPUnit_Framework_TestCase;
-use ZFT\Entity\User;
+use ZFT\User;
 
 class UserTest extends PHPUnit_Framework_TestCase
 {

@@ -9,7 +9,7 @@ namespace Portal\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use ZFT\Entity\User;
+use ZFT\User;
 
 class IndexController extends AbstractActionController
 {
